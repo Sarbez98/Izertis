@@ -1,0 +1,9 @@
+<div>
+  <input type="text" [(ngModel)]="query" placeholder="Search for a movie">
+  <button (click)="searchMovies()">Search</button>
+</div>
+<ul>
+  <li *ngFor="let movie of movies" (click)="goToDetails(movie.imdbID)">
+    {{ movie.Title }}
+  </li>
+</ul>
